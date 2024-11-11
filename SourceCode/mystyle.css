@@ -1,8 +1,10 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Body Styles */
 body {
     display: flex;
     flex-direction: column;
@@ -14,53 +16,106 @@ body {
     overflow: hidden;
 }
 
-.PortfolioImage{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    float: left;
-}
-
+/* Header */
 .header {
     padding: 20px;
     text-align: center;
     color: white;
     font-size: 30px;
-    position: relative; /* Keeps header above glowing elements */
-    z-index: 10; /* Ensure header is above other content */
-}
-
-.glowing {
     position: relative;
-    min-width: 700px;
-    height: 550px;
-    margin: 20px 0; /* Adjusted margin */
-    transform-origin: right;
-    animation: colorChange 5s linear infinite;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Container for the buttons */
+.button-container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-evenly; /* Evenly space out the buttons */
+    align-items: center; /* Vertically align the buttons */
+    width: 100%; /* Make the container full width */
+    padding: 10px 0; /* Padding for spacing around the buttons */
 }
 
-.glowing:nth-child(even) {
-    transform-origin: left;
+button {
+
+
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background change */
 }
 
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* Glowing Circle Animation */
+.glowing {
+    position: absolute;
+    width: 150px; /* Size of the rotating circle */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveCircle 10s linear infinite, colorChange 5s linear infinite;
+}
+
+/* Different animation speed and starting position for each glowing circle */
+.glowing-1 {
+    animation-delay: 0s;
+    top: 30%;
+    left: 50%;
+}
+
+.glowing-2 {
+    animation-delay: 2s;
+    top: 10%;
+    left: 10%;
+}
+
+.glowing-3 {
+    animation-delay: 4s;
+    top: 80%;
+    left: 30%;
+}
+
+.glowing-4 {
+    animation-delay: 6s;
+    top: 50%;
+    left: 80%;
+}
+
+/* Circle Animation */
+@keyframes moveCircle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Color-changing Glowing Effect */
 @keyframes colorChange {
     0% {
         filter: hue-rotate(0deg);
-        transform: rotate(0deg);
     }
     100% {
         filter: hue-rotate(360deg);
-        transform: rotate(360deg);
     }
 }
 
+/* Glowing Circle and Animation */
 .glowing span {
     position: absolute;
-    top: calc(80px * var(--i));
-    left: calc(80px * var(--i));
-    bottom: calc(80px * var(--i));
-    right: calc(80px * var(--i));
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .glowing span::before {
@@ -76,29 +131,17 @@ body {
 
 .glowing span:nth-child(3n + 1)::before {
     background: rgba(134, 255, 0, 1);
-    box-shadow: 0 0 20px rgba(134, 255, 0, 1),
-    0 0 40px rgba(134, 255, 0, 1),
-    0 0 60px rgba(134, 255, 0, 1),
-    0 0 80px rgba(134, 255, 0, 1),
-    0 0 0 8px rgba(134, 255, 0, .1);
+    box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1), 0 0 60px rgba(134, 255, 0, 1);
 }
 
 .glowing span:nth-child(3n + 2)::before {
     background: rgba(255, 214, 0, 1);
-    box-shadow: 0 0 20px rgba(255, 214, 0, 1),
-    0 0 40px rgba(255, 214, 0, 1),
-    0 0 60px rgba(255, 214, 0, 1),
-    0 0 80px rgba(255, 214, 0, 1),
-    0 0 0 8px rgba(255, 214, 0, .1);
+    box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1), 0 0 60px rgba(255, 214, 0, 1);
 }
 
 .glowing span:nth-child(3n + 3)::before {
     background: rgba(0, 226, 255, 1);
-    box-shadow: 0 0 20px rgba(0, 226, 255, 1),
-    0 0 40px rgba(0, 226, 255, 1),
-    0 0 60px rgba(0, 226, 255, 1),
-    0 0 80px rgba(0, 226, 255, 1),
-    0 0 0 8px rgba(0, 226, 255, .1);
+    box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1), 0 0 60px rgba(0, 226, 255, 1);
 }
 
 .glowing span:nth-child(3n + 1) {
