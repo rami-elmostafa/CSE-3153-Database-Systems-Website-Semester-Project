@@ -4,6 +4,29 @@
     padding: 0;
 }
 
+/* Portfolio Image Styling */
+.image-container {
+    position: fixed;
+    bottom: 0;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.PortfolioImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* About Me Section */
+.about-me {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
 /* Body Styles */
 body {
     display: flex;
@@ -30,6 +53,36 @@ body {
     align-items: center;
     height: 100vh;
 }
+/* Button Group Styling */
+.btn-group {
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: black; /* Dark background */
+    text-align: center; /* Center the buttons */
+    padding: 10px 0; /* Space around buttons */
+    z-index: 1000; /* Make sure the buttons stay on top of other content */
+}
+
+.btn-group button {
+    background-color: black; /* Green background */
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 50px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn-group button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
 /* Container for the buttons */
 .button-container {
     display: flex; /* Flexbox layout */
@@ -39,20 +92,6 @@ body {
     padding: 10px 0; /* Padding for spacing around the buttons */
 }
 
-button {
-
-
-    padding: 10px 20px; /* Padding inside the button */
-    border: none; /* Remove the border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Cursor changes to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth background change */
-}
-
-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
 /* Glowing Circle Animation */
 .glowing {
     position: absolute;
@@ -177,5 +216,15 @@ button:hover {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring the element up */
+}
+
+@media screen and (max-width: 768px) {
+    .btn-group button {
+        padding: 10px 15px;
     }
 }
