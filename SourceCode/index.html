@@ -10,6 +10,7 @@
 <div class="header">
     <h1> Hi, I'm Rami Elmostafa </h1>
     <p> A Full Stack Developer </p>
+    <a href="#about-me" class="about-me-btn">About Me</a>
 </div>
 
 <!-- Button Group positioned at the top -->
@@ -20,16 +21,17 @@
     <button onclick="window.location.href='Contact.html'">Contact</button>
 </div>
 
-<!-- Image Container -->
-<div class="image-container">
-    <img src="img/IMG_5316 (1).JPG" alt="Rami's Portfolio Image" class="PortfolioImage">
-</div>
 
 <!-- About Me Section -->
-<div class="about-me">
-    <h2>About Me</h2>
-    <p>Hello! I'm Rami Elmostafa, a passionate Full Stack Developer with expertise in both front-end and back-end technologies. I love coding and building user-friendly, efficient, and scalable applications. I'm always looking to learn and grow, and I'm excited about solving problems with code.</p>
-    <p>I have experience in various technologies including JavaScript, React, Node.js, and much more. Feel free to explore my projects and reach out if you want to collaborate!</p>
+<div id = "about-me" class="about-me-container">
+    <div class="about-me-image">
+        <img src="img/IMG_5316 (1).JPG" alt="Rami's Portfolio Image" class="about-me-portfolio-image">
+    </div>
+    <div class="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Rami Elmostafa, a passionate Full Stack Developer with expertise in both front-end and back-end technologies. I love coding and building user-friendly, efficient, and scalable applications. I'm always looking to learn and grow, and I'm excited about solving problems with code.</p>
+        <p>I have experience in various technologies including JavaScript, React, Node.js, and much more. Feel free to explore my projects and reach out if you want to collaborate!</p>
+    </div>
 </div>
 
 <!-- Glowing Animation Code (unchanged) -->
@@ -56,6 +58,19 @@
     <span style="--i:2;"></span>
     <span style="--i:3;"></span>
 </div>
+<!-- Add smooth scrolling to anchor links -->
+<script>
+    // Enable smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

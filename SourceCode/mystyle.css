@@ -2,17 +2,39 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Portfolio Image Styling */
-.image-container {
-    position: fixed;
-    bottom: 0;
-    left: 100px;
-    width: 200px;
-    height: 200px;
-    float: left;
+/* About Me Container */
+.about-me-container {
+    display: flex; /* Flexbox to align the image and text side by side */
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Center horizontally */
+    padding: 50px; /* Padding for spacing */
+    max-width: 1000px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
 }
+
+/* About Me Image */
+.about-me-image {
+    margin-right: 30px; /* Space between the image and the About Me text */
+}
+
+.about-me-portfolio-image {
+    width: 200px; /* Set the size of the image */
+    height: 200px; /* Set the size of the image */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fills the circle */
+    border: 5px solid #fff; /* Add a border for emphasis */
+}
+
+/* About Me Text */
+.about-me {
+    max-width: 600px; /* Limit the width of the text */
+    text-align: left; /* Align the text to the left */
+    visibility: visible;
+}
+
 
 .PortfolioImage {
     width: 100%;
@@ -20,24 +42,41 @@
     object-fit: cover;
     border-radius: 8px;
 }
-/* About Me Section */
-.about-me {
-    padding: 50px;
-    max-width: 800px;
-    margin: 0 auto;
+/* Styling for the About Me button */
+.about-me-btn {
+    display: inline-block;
+    margin-top: 20px; /* Space below the header */
+    padding: 15px 30px;
+    background-color: #3e8e41; /* Green button color */
+    color: white;
     text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.about-me-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
 }
 /* Body Styles */
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     min-height: 100vh;
     background: #000;
-    overflow: hidden;
+    color: white;
+    overflow-x: hidden;
 }
+
 
 /* Header */
 .header {
@@ -92,9 +131,11 @@ body {
     padding: 10px 0; /* Padding for spacing around the buttons */
 }
 
-/* Glowing Circle Animation */
 .glowing {
-    position: absolute;
+    position: fixed; /* Use fixed positioning to keep them in place */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the position to make it truly centered */
     width: 150px; /* Size of the rotating circle */
     height: 150px;
     display: flex;
@@ -102,6 +143,7 @@ body {
     align-items: center;
     animation: moveCircle 10s linear infinite, colorChange 5s linear infinite;
 }
+
 
 /* Different animation speed and starting position for each glowing circle */
 .glowing-1 {
@@ -127,6 +169,7 @@ body {
     top: 50%;
     left: 80%;
 }
+
 
 /* Circle Animation */
 @keyframes moveCircle {
