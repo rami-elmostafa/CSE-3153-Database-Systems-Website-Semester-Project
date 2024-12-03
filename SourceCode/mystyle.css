@@ -14,6 +14,79 @@
     max-width: 1000px; /* Maximum width for the container */
     margin: 0 auto; /* Center the container */
 }
+.roadmap-container {
+    width: 80%;
+    max-width: 600px;
+}
+/* Social Links Sidebar */
+.social-links {
+    position: fixed; /* Fixed position for the sidebar */
+    top: 10%; /* Center vertically */
+    left: 10px; /* Position slightly away from the left edge */
+    transform: translateY(-50%); /* Center the icons perfectly */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 15px; /* Space between icons */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Individual Social Icons */
+.social-icon img {
+    width: 40px; /* Icon size */
+    height: 40px;
+    border-radius: 50%; /* Optional: Make icons circular */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Optional: Different background colors for icons */
+.linkedin img {
+    background-color: #0077b5; /* LinkedIn Blue */
+}
+
+.github img {
+    background-color: #333; /* GitHub Black */
+}
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Image styling for milestones */
+.milestone-image {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fills the circle */
+    border: 3px solid #fff; /* Add a border for emphasis */
+}
+.milestone {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center image and text */
+    text-align: center;
+    gap: 10px; /* Space between elements */
+    margin: 20px 0; /* Space between milestones */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.line {
+    width: 3px;
+    height: 50px;
+    background-color: #3498db;
+}
+
 
 /* About Me Image */
 .about-me-image {
