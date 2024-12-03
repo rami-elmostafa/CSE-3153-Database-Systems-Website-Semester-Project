@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.projects-text{
+    font-family: Cursive, Lucida Handwriting;
+    font-size: 30px;
+}
 /* Projects Section Styling */
 .projects-section {
     text-align: center;
@@ -40,8 +44,8 @@
 }
 .Title {
     color: #fff;
-    font-size: 30px;
-    font-family: Bahnschrift;
+    font-size: 28px;
+    font-family: "Times New Roman";
     padding: 8px 12px;
     position: relative;
     Top: 0%;
@@ -450,4 +454,84 @@ body {
     .btn-group button {
         padding: 10px 15px;
     }
+}
+.button1 {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 75px;
+    right: 10px;
+    background-color: black;
+    width: auto;
+    text-align: right;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+
+}
+
+.button1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button1:hover span {
+    padding-right: 25px;
+}
+
+.button1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.button2 {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    background-color: black;
+    width: auto;
+    text-align: right;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+
+}
+
+.button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button2:hover span {
+    padding-right: 25px;
+}
+
+.button2:hover span:after {
+    opacity: 1;
+    right: 0;
 }
