@@ -4,6 +4,113 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Projects Section Styling */
+.projects-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    color: white;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Slide Images */
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Caption Styling */
+.caption {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: calc(100% - 24px);
+    text-align: center;
+}
+.Title {
+    color: #fff;
+    font-size: 30px;
+    font-family: Bahnschrift;
+    padding: 8px 12px;
+    position: relative;
+    Top: 0%;
+    width: calc(100% - 24px);
+    text-align: center;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: white;
+}
+
+/* Dots Navigation */
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Fading Animation */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /* About Me Container */
 .about-me-container {

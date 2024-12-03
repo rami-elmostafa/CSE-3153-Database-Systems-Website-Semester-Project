@@ -68,9 +68,36 @@
     </div>
 </div>
 
-<div id = "Projects" class="header">
-    <h1> featured projects </h1>
+<div id="Projects" class="projects-section">
+    <div class = "Projects Text"><h1>Featured Projects<br><br></h1></div>
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="slide fade">
+            <div class="Title">Standard Deviation and Linear Regression Web Application</div><br><br>
+            <img src="img/CalculatorApp.png" alt="Project 1">
+            <div class="caption">Project 1: Description</div>
+        </div>
+        <div class="slide fade">
+            <img src="img/project2.jpg" alt="Project 2">
+            <div class="caption">Project 2: Description</div>
+        </div>
+        <div class="slide fade">
+            <img src="img/project3.jpg" alt="Project 3">
+            <div class="caption">Project 3: Description</div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <!-- Dots for navigation -->
+    <div class="dots-container">
+        <span class="dot" onclick="setCurrentSlide(1)"></span>
+        <span class="dot" onclick="setCurrentSlide(2)"></span>
+        <span class="dot" onclick="setCurrentSlide(3)"></span>
+    </div>
 </div>
+
 
 
 
@@ -110,6 +137,43 @@
             });
         });
     });
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Change slide with arrows
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Go to a specific slide
+    function setCurrentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    // Display the current slide
+    function showSlides(n) {
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        slides.forEach((slide) => slide.style.display = "none");
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
+    }
+
+    // Auto-slide every 5 seconds
+    //setInterval(() => {
+     //   changeSlide(1);
+    //}, 10000);
+
 </script>
 
 </body>
