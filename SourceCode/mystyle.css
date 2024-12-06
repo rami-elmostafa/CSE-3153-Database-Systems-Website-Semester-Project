@@ -4,6 +4,64 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.headings-container {
+    display: flex; /* Enable Flexbox layout */
+    justify-content: space-between; /* Distribute items across the screen */
+    width: 79%; /* Ensure the container takes up the full width */
+    padding: 20px;
+    text-align: center; /* Center text in the center column */
+}
+
+.left, .center, .right {
+    flex: 1; /* Make all divs take equal space */
+    text-align: center; /* Center text inside each div by default */
+}
+
+.left {
+    text-align: left; /* Align text to the left for left div */
+    font-size: 17px;
+}
+
+.center {
+    text-align: center; /* Ensure text is centered for center div */
+    font-size: 20px;
+}
+
+.right {
+    text-align: center; /* Align text to the right for right div */
+    font-size: 25px;
+}
+.language{
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin: 10px;
+    color: white ;
+    width: fit-content;
+}
+.skills-section{
+    font-family: Cursive, Lucida Handwriting;
+    font-size: 30px;
+}
+
+.Endorsements-section{
+    font-family: Cursive, Lucida Handwriting;
+    font-size: 30px;
+}
+
+.left .language{
+    display: inline-block;
+}
+.center .language{
+    display: inline-block;
+}
+.right .language{
+    display: inline-block;
+}
+
+
+
 .projects-text{
     font-family: Cursive, Lucida Handwriting;
     font-size: 30px;
