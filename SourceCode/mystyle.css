@@ -11,13 +11,36 @@
     width: 79%; /* Ensure the container takes up the full width */
     padding: 20px;
     text-align: center; /* Center text in the center column */
-    background-blend-mode: lighten;
-    }
+}
+h3 {
+    font-size: 24px;
+    color: White;
+    margin: 10px 0;
+}
+
+.title {
+    font-size: 18px;
+    color: White;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: White;
+    margin-bottom: 20px;
+}
+.contact-link{
+
+}
+
+.worked-with {
+    font-size: 14px;
+    color: #999;
+}
 
 .left, .center, .right {
     flex: 1; /* Make all divs take equal space */
     text-align: center; /* Center text inside each div by default */
-
 }
 
 
@@ -43,6 +66,14 @@
     color: white ;
     width: fit-content;
 }
+.language-contact{
+    font-size: 20px;
+    padding: 10px;
+    border: #3498db solid 1px;
+    margin: 10px;
+    color: dodgerblue ;
+    width: fit-content;
+}
 .skills-section{
     font-family: Cursive, Lucida Handwriting;
     font-size: 30px;
@@ -63,7 +94,9 @@
     display: inline-block;
 }
 
-
+.center .language-contact{
+    display: inline-block;
+}
 
 .projects-text{
     font-family: Cursive, Lucida Handwriting;
@@ -201,6 +234,48 @@
     gap: 15px; /* Space between icons */
     z-index: 1000; /* Ensure it stays above other elements */
 }
+
+.contact-link {
+    display: flex;
+    align-items: center; /* Align items (email icon and text) horizontally */
+    gap: 10px; /* Space between the icon and text */
+}
+
+.contact-email-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove default link styling */
+    color: inherit; /* Ensure text color remains consistent */
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-email-link:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.contact-icon {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    border-radius: 50%; /* Optional: Circular icon */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.email-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Adjust text color */
+    transition: color 0.3s ease;
+}
+
+.contact-email-link:hover .email-text {
+    color: #3498db; /* Change text color when the link is hovered */
+}
+
 
 /* Individual Social Icons */
 .social-icon img {
