@@ -275,6 +275,22 @@ h3 {
 .contact-email-link:hover .email-text {
     color: #3498db; /* Change text color when the link is hovered */
 }
+.linkedin-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Adjust text color */
+    transition: color 0.3s ease;
+}
+
+
+.gitHub-text{
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Adjust text color */
+    transition: color 0.3s ease;
+}
+
+
 
 
 /* Individual Social Icons */
