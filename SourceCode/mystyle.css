@@ -11,15 +11,18 @@
     width: 79%; /* Ensure the container takes up the full width */
     padding: 20px;
     text-align: center; /* Center text in the center column */
-}
+    background-blend-mode: lighten;
+    }
 
 .left, .center, .right {
     flex: 1; /* Make all divs take equal space */
     text-align: center; /* Center text inside each div by default */
+
 }
 
+
 .left {
-    text-align: left; /* Align text to the left for left div */
+    text-align: center; /* Align text to the left for left div */
     font-size: 17px;
 }
 
