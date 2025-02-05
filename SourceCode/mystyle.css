@@ -23,6 +23,11 @@ h3 {
     color: White;
     margin-bottom: 10px;
 }
+.title2 {
+    font-size: 18px;
+    color: White;
+    margin-bottom: 10px;
+}
 
 .description {
     font-size: 16px;
@@ -155,7 +160,7 @@ h3 {
     transform: translateY(-50%);
     width: auto;
     padding: 10px;
-    color: black;
+    color: red;
     font-weight: bold;
     font-size: 18px;
     transition: 0.3s;
